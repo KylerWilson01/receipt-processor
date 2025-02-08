@@ -3,6 +3,7 @@
 ## Go commands
 
 ```bash
+go mod download
 go build -o server .
 go run ./server
 ```
