@@ -1,3 +1,4 @@
+// Package main is the entry point for the program
 package main
 
 import (
@@ -14,7 +15,7 @@ import (
 var prod = flag.Bool("prod", false, "Enable prefork in Production")
 
 func main() {
-	port := flag.String("port", "3000", "port to listen on")
+	port := flag.String("port", "8080", "port to listen on")
 	flag.Parse()
 
 	// create app
