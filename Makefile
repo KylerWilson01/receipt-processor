@@ -19,5 +19,5 @@ watch: clean
 build: test
 	GOOS=$(GOOS) GOARCH=$(GOARCH) CGO_ENABLED=$(CGO_ENABLED) go build -tags netgo -ldflags="-w -s" -o $(BUILD_DIR)/$(APP_NAME) main.go
 
-run: clean
-	go run .
+run: clean build
+	$(BUILD_DIR)/$(APP_NAME)
